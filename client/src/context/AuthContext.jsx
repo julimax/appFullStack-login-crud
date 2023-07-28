@@ -19,6 +19,7 @@ export const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
 
     const signup = async (user) => {
+        console.log(user)
         try {
             const res = await registerRequest(user)
             console.log(res)
