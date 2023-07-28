@@ -3,7 +3,7 @@ import { TOKEN_SECRET } from '../config.js'
 
 export const authRequired = (req, res, next) => {
     
-    const { token } = req.cookies;
+    const { token } = req.signedCookies;;
 
     if (!token) return res.status(401).json({ message: "Authorization denied"})
 
